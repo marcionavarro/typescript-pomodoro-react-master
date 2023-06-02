@@ -26,6 +26,11 @@ body {
   background: #EF5D50;
 }
 
+.working .pomodoro button{
+  background: #EF5D50;
+  color: #fff;
+}
+
 .hidden{
   display: none;
 }
@@ -60,6 +65,8 @@ body {
   transition: background-color 300ms ease-in-out;
   margin:20px auto;
 }
+
+
 
 .pomodoro .controls{
   display: flex;
