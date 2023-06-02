@@ -7,6 +7,72 @@
 
 body {
   font-family: sans-serif;
+  background: #41e1ba;
   transition: background-color 300ms ease-in-out;
-  line-height: 1.5
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.container{
+  display: flex;
+  background: #abeafe;
+  padding: 10px;
+}
+
+.working{
+  background: #EF5D50;
+}
+
+.hidden{
+  display: none;
+}
+
+.pomodoro{
+  background: #fff; 
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.pomodoro h2{
+  font-size: 1.225em;
+  text-align: center;
+}
+
+.pomodoro .timer{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.pomodoro button{
+  background: #41e1ba;
+  border:none;
+  cursor: pointer;
+  padding:10px 25px;
+  color: #000;
+  transition: background-color 300ms ease-in-out;
+  margin:20px auto;
+}
+
+.pomodoro .controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.pomodoro .details{
+  margin: 20px 0;
+}
+
+.pomodoro .details ol{
+  list-style: lower-roman;
+  margin-left:20px;
 }
