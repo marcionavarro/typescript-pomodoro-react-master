@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "window.zoomLevel": 0,
   "code-runner.executorMap": {
     "typescript": "clear && npx ts-node --files --transpile-only",
