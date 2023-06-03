@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useInterval } from '../hooks/use-interval';
 import { Button } from './button';
 import { Timer } from './timer';
-import { secondsToTime } from '../utils/second-to-time';
+import { secondsToTime } from '../utils/seconds-to-time';
 
 const bellStart = require('../sounds/src_sounds_bell-start.mp3');
 const bellFinish = require('../sounds/src_sounds_bell-finish.mp3');
@@ -23,7 +23,7 @@ export function PomodoroTimer(props: Props): JSX.Element {
   const [working, setWorking] = useState(false);
   const [resting, setResting] = useState(false);
   const [cyclesQtdManager, setCyclesQtdManager] = useState(
-    new Array(props.cycles).fill(true)
+    new Array(props.cycles - 1).fill(true)
   );
 
   const [completedCycles, setCompletedCylcles] = useState(0);
@@ -33,7 +33,7 @@ export function PomodoroTimer(props: Props): JSX.Element {
   useInterval(
     () => {
       setMainTime(mainTime - 1);
-      if(working) setFullWorkingTime(fullWorkingTime + 1);
+      if (working) setFullWorkingTime(fullWorkingTime + 1);
     },
     timeCounting ? 1000 : null,
   );
@@ -82,7 +82,7 @@ export function PomodoroTimer(props: Props): JSX.Element {
       cyclesQtdManager.pop();
     } else if (working && cyclesQtdManager.length <= 0) {
       configureRest(true);
-      setCyclesQtdManager(new Array(props.cycles).fill(true));
+      setCyclesQtdManager(new Array(props.cycles - 1).fill(true));
       setCompletedCylcles(completedCycles + 1);
     }
 

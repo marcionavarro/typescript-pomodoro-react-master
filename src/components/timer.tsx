@@ -1,12 +1,12 @@
 import React from 'react';
-import { secondsToTime } from '../utils/second-to-time';
+import { secondsToMinute } from '../utils/second-to-minute';
 
 interface Props {
   mainTime: number;
 }
 
-export function Timer(props: Props): JSX.Element{
-  return(
-    <div className="timer">{secondsToTime(props.mainTime)}</div>
+export function Timer(props: Props): JSX.Element {
+  return (
+    <div className="timer">{secondsToMinute(props.mainTime)}</div>
   );
 }
